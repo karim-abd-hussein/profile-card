@@ -1,0 +1,148 @@
+
+:root{
+
+        /* font-family */
+    --Kumbh-Sans:'Kumbh Sans';
+
+    --Font-size-name-and-stats: 18px;
+
+    --Dark-gray: hsl(0, 0%, 59%);
+
+    --Dark-cyan: hsl(185, 75%, 39%);    
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    background-color: var(--Dark-cyan);
+    font-family: var(--Kumbh-Sans);
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+h2{
+    font-weight: 700;
+    font-size: var(--Font-size-name-and-stats);
+}
+
+p{
+
+    color: var(--Dark-gray);
+}
+
+body::before{
+
+    
+    content: '';
+    background-image: url(./images/bg-pattern-top.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-position: 0% 100%;
+
+}
+
+body::after{
+
+   
+    content: '';
+    background-image: url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-position: 0% 0%;
+}
+
+
+main{
+
+    background-color: white;
+    text-align: center;
+    border-radius: 0.5em;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.img-container{
+
+    position: relative;
+}
+.img-container::after{
+
+    border-radius: 100%;
+    border: 4px solid white;
+    position: absolute;
+    bottom: -32%;
+    left: 35%;
+    content:'';
+    width: 6em ;
+    height: 6em;
+    background-image: url(./images/image-victor.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+ main >h2{
+
+    margin-top: 3em;
+    color: var(--Font-size-name-and-stats);
+    margin-bottom: 0.5em;
+}
+
+main >h2 span{
+
+    color: var(--Dark-gray);
+}
+
+main >p
+{
+
+    color: var(--Dark-gray);
+    margin-bottom: 2em;
+
+}
+
+.follows{
+
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid var(--Dark-gray);
+    padding: 1em;
+}
+
+
+
+@media (max-width:667px){
+
+
+    body::before{
+
+        background-position:100% 0%;
+
+    }
+}
+
+footer{
+    color: white;
+}
